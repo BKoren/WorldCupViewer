@@ -1,0 +1,182 @@
+﻿<Window x:Class="WorldCup.WPF.Dialogs.TeamStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        WindowStartupLocation="CenterOwner"
+        Icon="/Images/FormFavicon.ico"
+        Title="Team Statistics"
+        Height="450" Width="550"
+        MinHeight="250" MinWidth="350"
+        Loaded="Window_Loaded"
+        SizeChanged="Window_SizeChanged">
+
+    <Window.Resources>
+        <Style x:Key="TeamNameText" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="TeamInfoText" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="#80D3D3D3">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Viewbox
+            Grid.Row="0" 
+            x:Name="header"
+            HorizontalAlignment="Center" 
+            Margin="10">
+            <TextBlock
+                x:Name="TeamName"                
+                Style="{StaticResource TeamNameText}"
+            />
+        </Viewbox>
+
+        <Grid 
+            Grid.Row="1" 
+            Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Viewbox 
+                Grid.Row="0">
+                <TextBlock
+                    x:Name="GamesPlayedText"                           
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="1">
+                <TextBlock 
+                    x:Name="WinsText"                    
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="2">
+                <TextBlock 
+                    x:Name="DrawsText"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="3">
+                <TextBlock 
+                    x:Name="LossesText"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="4">
+                <TextBlock 
+                    x:Name="GoalsScoredText"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="5">
+                <TextBlock 
+                    x:Name="GoalsConcededText"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="6">
+                <TextBlock 
+                    x:Name="GoalDifferenceText"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="0" 
+                Grid.Column="1">
+                <TextBlock 
+                    x:Name="GamesPlayedValue"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="1"
+                Grid.Column="1">
+                <TextBlock
+                    x:Name="WinsValue"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="2" 
+                Grid.Column="1">
+                <TextBlock 
+                    x:Name="DrawsValue"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox
+                Grid.Row="3"
+                Grid.Column="1">
+                <TextBlock 
+                    x:Name="LossesValue"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="4" 
+                Grid.Column="1">
+                <TextBlock 
+                    x:Name="GoalsScoredValue"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox
+                Grid.Row="5"
+                Grid.Column="1">
+                <TextBlock 
+                    x:Name="GoalsConcededValue"
+                    Style="{StaticResource TeamInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Row="6" 
+                Grid.Column="1">
+                <TextBlock
+                    x:Name="GoalsDifferenceValue"
+                    Style="{StaticResource TeamInfoText}"
+                    />
+            </Viewbox>
+
+        </Grid>
+    </Grid>
+</Window>

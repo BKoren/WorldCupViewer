@@ -1,0 +1,197 @@
+﻿<Window x:Class="WorldCup.WPF.Dialogs.PlayerStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldCup.WPF.Dialogs"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Images/FormFavicon.ico"
+        Background="LightGray"
+        Height="450" Width="550"
+        MinHeight="250" MinWidth="350"
+        Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <Style x:Key="border" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Margin" Value="10, 0, 10, 10"/>
+            <Setter Property="Background" Value="Wheat"/>
+        </Style>
+
+        <Style x:Key="text" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid
+            MaxHeight="125">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Border
+                Margin="10, 10, 10, 0"
+                Padding="5"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="PlayerNameValue"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Column="1"
+                Margin="10, 10, 10, 0"
+                Style="{StaticResource border}">
+                <Image
+                    x:Name="PlayerImg"
+                    Stretch="Uniform">
+                </Image>
+            </Border>
+        </Grid>
+
+        <Grid
+            Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border
+                Grid.Row="1"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="ShirtNumberText"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="2"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="PositionText"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="3"
+                Style="{StaticResource border}">
+                <Viewbox>
+                        <TextBlock
+                        x:Name="CaptainText"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="4"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="GoalsText"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="5"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="CardsText"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="ShirtNumberValue"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="2"
+                Grid.Column="1"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="PositionValue"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="3"
+                Grid.Column="1"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="CapetainValue"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="4"
+                Grid.Column="1"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="GoalsValue"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+
+            <Border
+                Grid.Row="5"
+                Grid.Column="1"
+                Style="{StaticResource border}">
+                <Viewbox>
+                    <TextBlock
+                        x:Name="CardsValue"
+                        Style="{StaticResource text}"
+                    />
+                </Viewbox>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

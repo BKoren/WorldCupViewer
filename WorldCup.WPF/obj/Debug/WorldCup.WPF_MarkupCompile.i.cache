@@ -1,0 +1,20 @@
+﻿WorldCup.WPF
+
+
+winexe
+C#
+.cs
+G:\My Drive\Storage\Education\Collage\OOP - NET\WorldCupSolution\WorldCup.WPF\obj\Debug\
+WorldCup.WPF
+none
+false
+DEBUG;TRACE
+G:\My Drive\Storage\Education\Collage\OOP - NET\WorldCupSolution\WorldCup.WPF\App.xaml
+13747621137
+
+211932219896
+16-1610860609
+Controls\MatchControl.xaml;Controls\PlayerControl.xaml;Dialogs\ExitConfirmation.xaml;Dialogs\Loading.xaml;Dialogs\PlayerStatistics.xaml;Dialogs\TeamStatistics.xaml;MainWindow.xaml;Settings\BaseContent.xaml;Settings\StartUp.xaml;Settings\Update.xaml;Windows\MatchSelector.xaml;Windows\MatchStatistics.xaml;Windows\TeamSelection.xaml;
+
+True
+
