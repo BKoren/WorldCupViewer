@@ -1,4 +1,0 @@
-language=en
-gender=M
-load=API
-size=
