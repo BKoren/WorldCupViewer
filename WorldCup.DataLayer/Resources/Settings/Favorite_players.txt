@@ -1,0 +1,15 @@
+Name=Dominik LIVAKOVIC
+Captain=False
+Shirt_Number=1
+Position=Goalie
+Country=Croatia
+Name=Domagoj VIDA
+Captain=False
+Shirt_Number=21
+Position=Defender
+Country=Croatia
+Name=Danijel SUBASIC
+Captain=False
+Shirt_Number=23
+Position=Goalie
+Country=Croatia

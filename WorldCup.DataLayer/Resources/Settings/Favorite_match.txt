@@ -1,0 +1,2 @@
+homeTeam=Iceland
+awayTeam=Croatia

@@ -1,0 +1,300 @@
+﻿<local:Base
+        x:Class="WorldCup.WPF.Windows.MatchStatistics"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WorldCup.WPF.Windows"
+        xmlns:control="clr-namespace:WorldCup.WPF.Controls"
+        mc:Ignorable="d"
+        Icon="/Images/FormFavicon.ico"
+        WindowStartupLocation="CenterScreen"
+        Title="Match Statistics"
+        MinWidth="550" MinHeight="400"
+        Loaded="Window_Loaded"
+        SizeChanged="Window_SizeChanged">
+
+    <Window.Resources>
+
+        <sys:Double x:Key="labelMatchInfoFontSize">1</sys:Double>
+
+        <Style x:Key="labelMatchInfoText" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe Print"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="{DynamicResource labelMatchInfoFontSize}"/>
+        </Style>
+
+        <sys:Double x:Key="btnStatisticsFontSize">1</sys:Double>
+
+        <Style x:Key="btnStatistics" TargetType="Button">
+            <Setter Property="FontSize" Value="{DynamicResource btnStatisticsFontSize}"/>
+        </Style>
+
+        <Style x:Key="btnStatisticsLayout" TargetType="Border">
+            <Setter Property="MaxHeight" Value="55"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+
+        </Style>
+
+        <sys:Double x:Key="btnBackFontSize">1</sys:Double>
+
+        <Style x:Key="btnBackFont" TargetType="Button">
+            <Setter Property="FontSize" Value="{DynamicResource btnBackFontSize}"/>
+        </Style>
+
+        <Style x:Key="PlayerControlsAnimation" TargetType="{x:Type control:PlayerControl}">
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation 
+                                    Storyboard.TargetProperty="MaxHeight" 
+                                    To="180" 
+                                    Duration="0:0:0:2"
+                                />
+                                <DoubleAnimation 
+                                    Storyboard.TargetProperty="MaxWidth" 
+                                    To="180" 
+                                    Duration="0:0:0:2"
+                                />
+                                <ColorAnimation 
+                                    Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                    To="Yellow" 
+                                    Duration="0:0:0.2" 
+                                />
+                                <ThicknessAnimation 
+                                    Storyboard.TargetProperty="Margin" 
+                                    To="0" 
+                                    Duration="0:0:0.2"
+                                />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                    
+                    <Trigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation 
+                                    Storyboard.TargetProperty="MaxWidth" 
+                                    To="100" 
+                                    Duration="0:0:0:2"
+                                />
+                                <DoubleAnimation 
+                                    Storyboard.TargetProperty="MaxHeight" 
+                                    To="130" 
+                                    Duration="0:0:0:2"
+                                />
+                                <ColorAnimation 
+                                    Storyboard.TargetProperty="(Control.Background).(SolidColorBrush.Color)" 
+                                    To="LightGray" 
+                                    Duration="0:0:0.2" 
+                                />
+                                <ThicknessAnimation 
+                                   Storyboard.TargetProperty="Margin" 
+                                   To="2" 
+                                   Duration="0:0:0:0.1"
+                                />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="header"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.Background>
+                <SolidColorBrush 
+                    Color="LightGreen"
+                    Opacity="0.45"
+                />
+            </Grid.Background>
+
+            <Border
+                x:Name="btnHomeStatisticsLayout"                    
+                Margin="10, 0, 0, 0"
+                Style="{StaticResource btnStatisticsLayout}">
+                <Button
+                    x:Name="btnHomeStatistics"                    
+                    Style="{StaticResource btnStatistics}"
+                    Click="HomeTeamStatistics_Click"
+                />
+            </Border>
+
+            <Border
+                Grid.Column="4"
+                x:Name="btnAwayStatisticsLayout"
+                Margin="0, 0, 10, 0"
+                Style="{StaticResource btnStatisticsLayout}">
+                <Button
+                    x:Name="btnAwayStatistics"
+                    Style="{StaticResource btnStatistics}"
+                    Click="AwayTeamStatistics_Click"
+                />
+            </Border>
+
+            <Viewbox 
+                Grid.Column="1"             
+                HorizontalAlignment="Left"
+                x:Name="labelHomeTeam">
+                <TextBlock                    
+                    x:Name="labelHomeTeamText"                       
+                    FontSize="20"
+                    Style="{StaticResource labelMatchInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox
+                Grid.Column="2"
+                x:Name="labelMatchScore">
+                <TextBlock
+                    x:Name="labelMatchScoreText"                
+                    Style="{StaticResource labelMatchInfoText}"
+                />
+            </Viewbox>
+
+            <Viewbox 
+                Grid.Column="3"                     
+                x:Name="labelAwayTeam">
+                <TextBlock                    
+                    x:Name="labelAwayTeamText"                                          
+                    Style="{StaticResource labelMatchInfoText}"
+                />
+            </Viewbox>
+
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            x:Name="MainGrid">
+            <Grid.Background>
+                <ImageBrush 
+                    ImageSource="/Images/WPF_FootballField.jpg"
+                    Opacity="0.65"
+                />
+            </Grid.Background>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid 
+                x:Name="LeftSide">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid
+                    x:Name="LeftGoalkeeper">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Border
+                        Grid.Row="1"
+                        x:Name="btnBackLayout"                    
+                        MaxWidth="85"     
+                        Margin="5, 0, 0, 5"
+                        BorderBrush="Black"
+                        BorderThickness="2">
+                        <Button
+                            x:Name="btnBack"
+                            Width="auto"
+                            Height="auto"
+                            Padding="5"
+                            Style="{StaticResource btnBackFont}"
+                            Click="BtnBack_Click"
+                        />
+                    </Border>
+                </Grid>
+                <Grid
+                    Grid.Column="1"
+                    x:Name="LeftDefense">
+                </Grid>
+
+                <Grid
+                    Grid.Column="2"
+                    x:Name="LeftMidfilder1">
+                </Grid>
+
+                <Grid
+                    Grid.Column="3"
+                    x:Name="LeftMidfilder2">
+                </Grid>
+
+                <Grid
+                    Grid.Column="4"
+                    x:Name="LeftAttack">
+                </Grid>
+            </Grid>
+            
+            <Grid
+                x:Name="RightSide"
+                Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid
+                    Grid.Column="4"
+                    x:Name="RightGoalkeeper"
+                    Margin="0,0,0,20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+                
+                <Grid
+                    Grid.Column="3"
+                    x:Name="RightDefense">
+                </Grid>
+                    
+                <Grid
+                    Grid.Column="2"
+                    x:Name="RightMidfilder1">
+                </Grid>
+
+                <Grid
+                    Grid.Column="1"
+                    x:Name="RightMidfilder2">
+                </Grid>
+
+                <Grid
+                    x:Name="RightAttack">
+                </Grid>                                        
+            </Grid>
+        </Grid>
+    </Grid>
+
+</local:Base>

@@ -1,0 +1,26 @@
+{
+  "ShowEmptyProjects": false,
+  "SelectedGroups": [
+    "G:\\My Drive\\Storage\\Education\\Collage\\OOP - NET\\WorldCupSolution\\WorldCup.WinForms\\Properties\\Resources.resx",
+    "G:\\My Drive\\Storage\\Education\\Collage\\OOP - NET\\WorldCupSolution\\WorldCup.DataLayer\\Properties\\Resources.resx"
+  ],
+  "ExpandedProjects": [
+    "G:\\My Drive\\Storage\\Education\\Collage\\OOP - NET\\WorldCupSolution\\WorldCup.DataLayer\\WorldCup.DataLayer.csproj",
+    "G:\\My Drive\\Storage\\Education\\Collage\\OOP - NET\\WorldCupSolution\\WorldCup.WinForms\\WorldCup.WinForms.csproj"
+  ],
+  "EnableSpellChecker": true,
+  "ColumnOrder": [
+    "name",
+    "type",
+    "neutral-value",
+    "neutral-comment",
+    "file-path",
+    "file-name",
+    "en",
+    "hr"
+  ],
+  "VisibleColumnKeys": [
+    "name",
+    "hr"
+  ]
+}

@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="TextIntro" xml:space="preserve">
+    <value>Istražite statistike sa Svjetskih prvenstava za muškarce 2018. i Žene 2019. godine.</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Svjetsko Prvenstvo Statistika Preglednik</value>
+  </data>
+  <data name="BtnNext" xml:space="preserve">
+    <value>Dalje</value>
+  </data>
+  <data name="TextLanguageHRV" xml:space="preserve">
+    <value>Hrvatski</value>
+  </data>
+  <data name="TextLanguageENG" xml:space="preserve">
+    <value>Engleski</value>
+  </data>
+  <data name="TextCategoryMale" xml:space="preserve">
+    <value>Muškarci</value>
+  </data>
+  <data name="TextCategoryFemale" xml:space="preserve">
+    <value>Žene</value>
+  </data>
+  <data name="TextTeamSelector" xml:space="preserve">
+    <value>Izaberite Svoj Omiljeni Tim!</value>
+  </data>
+  <data name="BtnBack" xml:space="preserve">
+    <value>Natrag</value>
+  </data>
+  <data name="BtnSettings" xml:space="preserve">
+    <value>Postavke</value>
+  </data>
+  <data name="BtnShowRankings" xml:space="preserve">
+    <value>Prikaži Rangiranje</value>
+  </data>
+  <data name="BtnPrintRankings" xml:space="preserve">
+    <value>Ispiši Rangiranje</value>
+  </data>
+  <data name="TextPlayerSelector" xml:space="preserve">
+    <value>Odaberite Favorite!</value>
+  </data>
+  <data name="TextFavorites" xml:space="preserve">
+    <value>Favoriti</value>
+  </data>
+  <data name="BtnApply" xml:space="preserve">
+    <value>Primjeni</value>
+  </data>
+  <data name="TextOptionLanguage" xml:space="preserve">
+    <value>Postavi Jezik</value>
+  </data>
+  <data name="TextOptionCategory" xml:space="preserve">
+    <value>Postavi Kategoriju</value>
+  </data>
+  <data name="TextDataLoad" xml:space="preserve">
+    <value>Odaberite način učitavanja podataka</value>
+  </data>
+  <data name="TextOptionJSON" xml:space="preserve">
+    <value>Lokalno</value>
+  </data>
+  <data name="TextOptionAPI" xml:space="preserve">
+    <value>Internet</value>
+  </data>
+  <data name="TextLoading" xml:space="preserve">
+    <value>Učitavanje...</value>
+  </data>
+  <data name="BtnRankCard" xml:space="preserve">
+    <value>Žuti Kartoni</value>
+  </data>
+  <data name="BtnRankGoal" xml:space="preserve">
+    <value>Golovi</value>
+  </data>
+  <data name="TextRankCriteria" xml:space="preserve">
+    <value>Postavite Kriteriji Rangiranja</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ImgDefault" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BtnRemove" xml:space="preserve">
+    <value>Ukloni</value>
+  </data>
+  <data name="ImgStar" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextExit" xml:space="preserve">
+    <value>Da li ste sigurni da želite zatvoriti program?</value>
+  </data>
+  <data name="BtnExit" xml:space="preserve">
+    <value>Spremi i Zatvori</value>
+  </data>
+  <data name="BtnYes" xml:space="preserve">
+    <value>Da</value>
+  </data>
+  <data name="BtnNo" xml:space="preserve">
+    <value>Ne</value>
+  </data>
+  <data name="BtnMatches" xml:space="preserve">
+    <value>Utakmice</value>
+  </data>
+  <data name="BtnPlayers" xml:space="preserve">
+    <value>Igrači</value>
+  </data>
+  <data name="TextCategoryOption" xml:space="preserve">
+    <value>Odaberite opciju za rangiranje</value>
+  </data>
+  <data name="TextMarkImg" xml:space="preserve">
+    <value>Slika</value>
+  </data>
+  <data name="TextMarkName" xml:space="preserve">
+    <value>Ime</value>
+  </data>
+  <data name="TextMarkShirtNumber" xml:space="preserve">
+    <value>Broj</value>
+  </data>
+  <data name="TextMarkPosition" xml:space="preserve">
+    <value>Pozicija</value>
+  </data>
+  <data name="TextMarkCapetain" xml:space="preserve">
+    <value>Kapetan</value>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="TextSetImage" xml:space="preserve">
+    <value>Pritisnite na igrača da bi ste postavili profilnu sliku igrača.</value>
+  </data>
+  <data name="TextMarkGoals" xml:space="preserve">
+    <value>Golovi</value>
+  </data>
+  <data name="TextMarkCards" xml:space="preserve">
+    <value>Žuti Kartoni</value>
+  </data>
+  <data name="TextMarkLocation" xml:space="preserve">
+    <value>Lokacija</value>
+  </data>
+  <data name="TextMarkHomeTeam" xml:space="preserve">
+    <value>Domaća Momčad</value>
+  </data>
+  <data name="TextMarkAwayTeam" xml:space="preserve">
+    <value>Gostujuća momčad</value>
+  </data>
+  <data name="TextMarkVisitors" xml:space="preserve">
+    <value>Posjetitelji</value>
+  </data>
+  <data name="TextMarkDate" xml:space="preserve">
+    <value>Datum</value>
+  </data>
+  <data name="TextMarkAppearances" xml:space="preserve">
+    <value>Nastupi</value>
+  </data>
+  <data name="ImgArrowRight" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ImgArrowLeft" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="BtnUpload" xml:space="preserve">
+    <value>Učitaj</value>
+  </data>
+  <data name="TextImageFormat" xml:space="preserve">
+    <value>Podržani formati: JPG.</value>
+  </data>
+  <data name="TextUploadInfo" xml:space="preserve">
+    <value>Učitavanje Uspješno.</value>
+  </data>
+  <data name="TextUpladFailed" xml:space="preserve">
+    <value>Učitavanje neuspješno!</value>
+  </data>
+  <data name="TextOptionScreenSize" xml:space="preserve">
+    <value>Odaberite veličinu zaslona</value>
+  </data>
+  <data name="TextSettingsTitle" xml:space="preserve">
+    <value>Postavke</value>
+  </data>
+  <data name="TextScreenFull" xml:space="preserve">
+    <value>Puni Zaslon</value>
+  </data>
+  <data name="TextScreenMedium" xml:space="preserve">
+    <value>Srednji Zaslon</value>
+  </data>
+  <data name="TextScreenSmall" xml:space="preserve">
+    <value>Mali Zaslon</value>
+  </data>
+  <data name="BtnSetMatch" xml:space="preserve">
+    <value>Odaberite Omiljenu Utakmicu</value>
+  </data>
+  <data name="TextNoTeamSet" xml:space="preserve">
+    <value>Nema Odabrane Omiljene Momčadi</value>
+  </data>
+  <data name="TextNoMatchSet" xml:space="preserve">
+    <value>Nema Odabrane Omiljene Utakmice</value>
+  </data>
+  <data name="BtnDetailStatistics" xml:space="preserve">
+    <value>Prikaz Detaljne Statistike</value>
+  </data>
+  <data name="BtnSetTeam" xml:space="preserve">
+    <value>Odaberite Omiljenu Momčad</value>
+  </data>
+  <data name="BtnTeamStatistics" xml:space="preserve">
+    <value>Statistika</value>
+  </data>
+  <data name="TextTeamGames" xml:space="preserve">
+    <value>Odigrano</value>
+  </data>
+  <data name="TextTeamWins" xml:space="preserve">
+    <value>Pobjede</value>
+  </data>
+  <data name="TextTeamDraws" xml:space="preserve">
+    <value>Neriješeni</value>
+  </data>
+  <data name="TextTeamLoss" xml:space="preserve">
+    <value>Porazi</value>
+  </data>
+  <data name="TextTeamGoals" xml:space="preserve">
+    <value>Golovi</value>
+  </data>
+  <data name="TextTeamConceded" xml:space="preserve">
+    <value>Primljeni</value>
+  </data>
+  <data name="TextTeamDifference" xml:space="preserve">
+    <value>Razlika</value>
+  </data>
+</root>

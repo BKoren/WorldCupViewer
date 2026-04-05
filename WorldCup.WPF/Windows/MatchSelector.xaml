@@ -1,0 +1,110 @@
+﻿<local:Base 
+        x:Class="WorldCup.WPF.Windows.MatchSelector"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldCup.WPF.Windows"
+        mc:Ignorable="d"
+        Icon="/Images/FormFavicon.ico"    
+        WindowStartupLocation="CenterScreen"
+        Title="Favorite Match" 
+        MinWidth="400" 
+        Loaded="Window_Loaded"
+        SizeChanged="Window_SizeChanged">
+    
+    <Window.Resources>
+        <sys:Double x:Key="fontSize">1</sys:Double>
+
+        <Style x:Key="btn" TargetType="Button">
+            <Setter Property="FontSize" Value="{DynamicResource fontSize}"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style x:Key="btnBorder" TargetType="Border">
+            <Setter Property="Margin" Value="50, 0, 50, 15"/>
+            <Setter Property="MaxWidth" Value="125"/>
+            <Setter Property="MaxHeight" Value="75"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+    </Window.Resources>
+    
+    <Grid>
+        
+        <Grid.Background>
+            <ImageBrush 
+                ImageSource="/Images/WPF_Background.jpg"
+                Opacity="0.65"
+            />
+        </Grid.Background>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Viewbox
+            x:Name="header">
+            <TextBlock
+                x:Name="title"
+                FontFamily="Segoe Print"
+                FontWeight="Bold"
+                HorizontalAlignment="Center"
+                Margin="5"
+            />
+        </Viewbox>
+
+        <Border
+            Grid.Row="1"  
+            x:Name="content"
+            BorderThickness="5"
+            BorderBrush="DarkGray"            
+            CornerRadius="4"                     
+            Margin="0, 0, 0, 5"
+            VerticalAlignment="Top">
+            <StackPanel                        
+                x:Name="MatchesPanel"
+                VerticalAlignment="Top"
+                Background="White"
+            />
+        </Border>
+
+        <Grid
+            Grid.Row="2"              
+            MinHeight="35"
+            x:Name="footer">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border
+                HorizontalAlignment="Left"               
+                Style="{StaticResource btnBorder}">
+                <Button                
+                    x:Name="btnBack"                          
+                    Style="{StaticResource btn}"
+                    Click="BtnBack_Click">
+                </Button>
+            </Border>
+            
+            <Border
+                Grid.Column="1"            
+                HorizontalAlignment="Right"                
+                Style="{StaticResource btnBorder}">
+                <Button
+                    x:Name="btnApply"                   
+                    Style="{StaticResource btn}"
+                    Click="BtnApply_Click">
+                </Button>
+            </Border>
+            
+        </Grid>
+    </Grid>
+</local:Base>
