@@ -1,25 +1,70 @@
-World Cup Statistics – .NET Project
-Project Overview
+# World Cup Statistics App (.NET)
 
-The goal of the project is to create applications that display statistics from the FIFA World Cups:
-Men’s World Cup 2018 and Women’s World Cup 2019.
+A desktop application for displaying and analyzing statistics from the FIFA World Cup 2018 (men) and 2019 (women), built using .NET technologies.
 
-The solution consists of three separate projects:
-Data Layer (Class Library), Windows Forms Application, Windows Presentation Foundation (WPF) Application
+The project consists of multiple applications sharing a common data layer and consuming data from a public API.
 
-Data Layer (Class Library) project is shared by both client applications and is responsible for all data manipulation.
-Responsibilities: Fetching data from the REST API, loading data from JSON files, parsing and mapping JSON data to domain models, preparing data for client applications, saving data to text files, reading data from text files and selecting the data source (API or JSON files) via a configuration file.
+## 🚀 Features
+
+### Windows Forms Application
+
+* Select preferred championship (men/women) and language (HR/EN)
+* Choose favorite national team
+* Select and manage favorite players (drag & drop, context menu)
+* Display player information (name, number, position, captain status)
+* Add custom player images
+* Generate ranking lists:
+  * Goals scored
+  * Yellow cards
+  * Match attendance
+* Export rankings to PDF
+* Persistent settings stored locally
+
+### WPF Application
+
+* Responsive UI with selectable resolutions / fullscreen
+* Display match results between selected teams
+* Animated navigation between views
+* Visual representation of team lineups on a football field
+* Detailed player and team statistics
+* Shared settings with Windows Forms app
+
+### Data Layer (Class Library)
+
+* Fetch data from API or local JSON files
+* Parse and map JSON data into models
+* Provide processed data to client apps
+* Handle file storage and retrieval
+* Configurable data source (API vs JSON)
+
+## 🛠️ Tech Stack
+
+* C# (.NET)
+* Windows Forms
+* Windows Presentation Foundation (WPF)
+* REST API consumption
+* JSON parsing
+* File I/O (text files)
+* Asynchronous programming (async/await)
+
+## 🌐 API Used
+
+Data is retrieved from:
+
+* https://worldcup-vua.nullbit.hr/men/
+* https://worldcup-vua.nullbit.hr/women/
 
 
-The Windows Forms application focuses primarily on functionality and correct usage of WinForms controls.
-Key Features: Asynchronous data fetching from the API, initial setup(tournament selection (men / women) and application language (Croatian / English)), persistent storage of settings in text files, favorite team selection, selection of three favorite players, custom player controls displaying, drag & drop and context menu support for player management, player images stored within the solution, rankings(by number of goals or yellow cards or match by attendance), export of rankings to PDF, confirmation dialogs for settings changes and application exit, full exception handling.
+## ▶️ Running the Project
 
-The WPF application emphasizes responsiveness, animations, and a richer user interface.
-Key Features: Shared settings with the Windows Forms application, responsive layout, asynchronous data loading with loading animations, favorite and opponent team selection, display of match results between selected teams, snimated display of team details, visual representation of starting lineups on a football field, player display including animation on hover, settings window with confirmation, exit confirmation dialog
+### Windows Forms Application
 
-Technical information: All run-time input is stored in directory(Solution/WorldCup.DataLayer/Resources/Settings), the application runs on any compatible Windows machine without code modifications.
+1. Navigate to the build directory: WorldCupViewer\WorldCup.WinForms\bin\Debug
+2. Run the application: WorldCup.WinForms.exe
 
-Combile conditions: Line endings must match LF format.
+### Windows WPF
 
-Author: Bruno Koren.
-Year: 2025
+1. Navigate to the build directory: WorldCupViewer\WorldCup.WPF\bin\Debug
+2. Run the application: WorldCup.WPF.exe
+
+Make sure the project is built before running the executables.
